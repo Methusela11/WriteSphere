@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>WriteSphere | Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ========================= CSS here ========================= -->
+      <style>
+          .toggle-password:hover {
+              background-color: #ffe680; /* subtle highlight on hover */
+          }
+      </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5.0.0-beta1.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/LineIcons.2.0.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/tiny-slider.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/lindy-uikit.css' %}" />
+  </head>
+
+  <body>
+    <!-- ========================= header ========================= -->
+{#    <header class="header header-6 bg-warning">#}
+{#      {% include 'navbar.html' %}#}
+{#    </header>#}
+
+<section id="signup" class="hero-section-wrapper-5" style="background-image: url('{% static 'assets/img/svg/glow.svg' %}'); min-height: 100vh;">
+      <div class="container d-flex align-items-center justify-content-center" style="min-height: 90vh;">
+  <div class="col-lg-6 col-md-8">
+    <div class="card shadow-lg p-5 radius-20 wow fadeInUp bg-light" data-wow-delay=".2s">
+
+      <!-- Centered Logo -->
+      <div class="text-center mb-3">
+        <a class="navbar-brand d-inline-block text-center mb-3" href="{% url 'login' %}">
+          <img src="{% static 'assets/img/logo/logo-.png' %}"
+               alt="Logo"
+               style="border-radius: 10%; height: 70px; width: 130px;" />
+        </a><br>
+      <!-- Heading -->
+      <b class="text-center mb-4">Welcome Back!</b>
+      <p class="text-center mb-4 text-muted">Login to WriteSphere</p>
+          </div>
+
+
+{#        {% if messages %}#}
+{#            <div class="mb-3">#}
+{#                {% for message in messages %}#}
+{#                    <div class="alert alert-{{ message.tags }}">#}
+{#                        {{ message }}#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#        {% endif %}#}
+
+      <!-- Form -->
+      <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+
+        <!-- Username -->
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <div class="input-group">
+            <span class="input-group-text bg-warning"><i class="bi bi-person"></i></span>
+            <input type="text" class="form-control" id="username" name="username"
+                   placeholder="Enter your username" required>
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+            <label for="password1" class="form-label">Password</label>
+            <div class="input-group">
+                <span class="input-group-text bg-warning"><i class="bi bi-lock"></i></span>
+                <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter your password" required>
+                <span class="input-group-text toggle-password" data-target="password1" style="cursor: pointer;">
+                    <i class="bi bi-eye"></i>
+                </span>
+            </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="d-grid">
+          <button type="submit" class="button button-lg radius-50 bg-warning">
+            <b style="color:black;">Login</b>
+          </button>
+        </div>
+
+        <!-- Footer -->
+
+      </form>
+    </div>
+      <p class="text-center mt-4 mb-0">
+          Don’t have an account?
+          <a href="{% url 'signup' %}" class="text-warning fw-bold">Create an Account</a>
+        </p>
+  </div>
+</div>
+
+    </section>
+    <!-- ========================= signup section end ========================= -->
+
+    <a href="#" class="scroll-top"><i class="lni lni-chevron-up"></i></a>
+
+    <script>
+  document.querySelectorAll('.toggle-password').forEach(icon => {
+    icon.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-target');
+      const input = document.getElementById(targetId);
+      const iconElement = this.querySelector('i');
+
+      if (input.type === 'password') {
+        input.type = 'text';
+        iconElement.classList.remove('bi-eye');
+        iconElement.classList.add('bi-eye-slash');
+      } else {
+        input.type = 'password';
+        iconElement.classList.remove('bi-eye-slash');
+        iconElement.classList.add('bi-eye');
+      }
+    });
+  });
+</script>
+    <!-- ========================= JS here ========================= -->
+    <script src="{% static 'assets/js/bootstrap-5.0.0-beta1.min.js' %}"></script>
+    <script src="{% static 'assets/js/tiny-slider.js' %}"></script>
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
+</html>
+
+
+
+</body>
+</html>
