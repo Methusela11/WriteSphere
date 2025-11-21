@@ -57,7 +57,7 @@
     <main class="main">
       <header class="topbar">
         <button class="menu-btn"><i class="fas fa-bars"></i></button>
-        <h4>Welcome Methusela!</h4>
+        <h4>Welcome back {{ request.user.username }}!</h4>
         <div class="profile">
           <i class="fas fa-bell"></i>
           <div class="avatar"><i class="bi bi-person-circle"></i></div>
@@ -72,8 +72,7 @@
         </div>
 
         <div class="cards">
-          <div class="card"><h4>Name</h4><p>METHUSELA ENOCH</p></div>
-          <div class="card"><h4>Username</h4><p>RMEKSGAMER</p></div>
+          <div class="card"><h4>Username</h4><p>{{ request.user.username }}</p></div>
           <div class="card"><h4>Account Status</h4><span class="status active">Active</span></div>
           <div class="card"><h4>Total Money In</h4><p>KSH 00</p></div>
           <div class="card"><h4>Current Balance</h4><p>KSH 00</p></div>

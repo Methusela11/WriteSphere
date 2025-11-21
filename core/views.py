@@ -12,6 +12,9 @@ def home(request):
     return render(request, 'index.html')
 
 def dashboard(request):
+    context = {
+        "username": request.user.username,  # 👈 Send username to template
+    }
     return render(request, 'dashboard.html')
 
 def signup(request):
