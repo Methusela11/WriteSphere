@@ -4,21 +4,19 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>WriteSphere | Sign Up</title>
+    <title>WriteSphere - Sign Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- ========================= CSS here ========================= -->
-      <style>
-          .toggle-password:hover {
-              background-color: #ffe680; /* subtle highlight on hover */
-          }
-      </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap-5.0.0-beta1.min.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/LineIcons.2.0.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/tiny-slider.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/lindy-uikit.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/auth.css' %}">
+    <link rel="icon" href="../static/assets/img/logo/logo--.png"/>
+
   </head>
 
   <body>
@@ -29,9 +27,9 @@
     <!-- ========================= header end ========================= -->
 
     <!-- ========================= signup section ========================= -->
-    <section id="signup" class="hero-section-wrapper-5" style="background-image: url('{% static 'assets/img/svg/glow.svg' %}'); min-height: 100vh;">
+    <section id="signup" class="hero-section-wrapper-5" style="background-image: url('{% static 'assets/img/svg/glow.svg' %}'); min-height: 100vh; font-family: Arial, sans-serif;">
       <div class="container d-flex align-items-center justify-content-center" style="min-height: 90vh;">
-          <div class="col-lg-6 col-md-8">
+          <div class="col-lg-6 col-md-8" style="margin-top: 80px;">
               <div class="card shadow-lg p-5 radius-20 wow fadeInUp bg-light" data-wow-delay=".2s">
 
                         <!-- Centered Logo -->
@@ -42,7 +40,7 @@
                                style="border-radius: 10%; height: 70px; width: 130px;" />
                       </a><br>
                       <!-- Heading -->
-                      <b class="text-center mb-4">Join us on WriteSphere</b>
+                      <b class="text-center mb-4">Join us on <a href="">WriteSphere</a></b>
                       <p class="text-center mb-4 text-muted">Create an Account</p>
                   </div>
 
@@ -111,7 +109,7 @@
 
                       <!-- Submit -->
                       <div class="d-grid">
-                          <button type="submit" class="button button-lg radius-50 bg-warning"><b style="color:black;">Submit</b></button>
+                          <button type="submit" class="button button-lg radius-50 bg-warning"><b style="color:black; ">Submit</b></button>
                       </div>
 
                       <!-- Footer -->

@@ -1,0 +1,22 @@
+.form-label{
+    color: black;
+}
+
+.toggle-password:hover{
+    background-color: #ffe680;
+}
+
+.button{
+    border: 2px solid #255cc3;
+}
+
+.hero-section-wrapper-5{
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+@media (max-width: 800px) {
+    .card{
+        width: 100%;
+    }
+}

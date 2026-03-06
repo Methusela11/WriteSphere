@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WriteSphere | Dashboard</title>
+  <title>WriteSphere - {{ request.user.username }}</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -17,6 +17,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+  <link rel="icon" href="../static/assets/img/logo/logo--.png"/>
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{% static 'assets/css/dashboard.css' %}" />
@@ -58,16 +59,20 @@
       <header class="topbar">
         <button class="menu-btn"><i class="fas fa-bars"></i></button>
         <h4>Welcome back {{ request.user.username }}!</h4>
+
         <div class="profile">
           <i class="fas fa-bell"></i>
           <div class="avatar"><i class="bi bi-person-circle"></i></div>
         </div>
+
       </header>
 
       <section class="dashboard">
         <div class="title">
           <h2>Dashboard</h2>
-          <p>KENYAWRITERZ</p>
+          <p>
+              <a href="" style="text-decoration: none;"><strong>WriteSphere</strong></a>
+          </p>
           <small>0d 10h 55m 17s — to new tasks.</small>
         </div>
 
